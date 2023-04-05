@@ -8,13 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'nx-sass-lib',
   tagline: 'Dinosaurs are cool',
-  url: 'https://full-stack-nx-plugins.github.io',
-  baseUrl: '/nx-sass-lib/',
+  url: 'https://wgd3.github.io/full-stack-nx-plugins/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'wgd3', // Usually your GitHub org/user name.
-  projectName: 'nx-sass-lib', // Usually your repo name.
+  projectName: 'full-stack-nx-plugins', // Usually your repo name.
 
   presets: [
     [
@@ -24,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          editUrl: 'https://github.com/wgd3/full-stack-nx-plugins/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+            'https://github.com/wgd3/full-stack-nx-plugins/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
