@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "nx-sass-lib",
+  "version": "0.0.1",
+  "generators": {
+    "nx-sass-lib": {
+      "factory": "./src/generators/nx-sass-lib/generator",
+      "schema": "./src/generators/nx-sass-lib/schema.json",
+      "description": "nx-sass-lib generator"
+    }
+  }
+}

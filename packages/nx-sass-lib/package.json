@@ -1,0 +1,7 @@
+{
+  "name": "@wgd3/nx-sass-lib",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "generators": "./generators.json",
+  "executors": "./executors.json"
+}
