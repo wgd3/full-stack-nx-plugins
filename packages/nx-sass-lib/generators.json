@@ -3,10 +3,11 @@
   "name": "nx-sass-lib",
   "version": "0.0.1",
   "generators": {
-    "nx-sass-lib": {
-      "factory": "./src/generators/nx-sass-lib/generator",
-      "schema": "./src/generators/nx-sass-lib/schema.json",
-      "description": "nx-sass-lib generator"
+   
+    "init": {
+      "factory": "./src/generators/init/generator",
+      "schema": "./src/generators/init/schema.json",
+      "description": "Creates a new SASS style library based on the 7-1 pattern"
     }
   }
 }
