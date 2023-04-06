@@ -1,1 +1,1 @@
-export {InitGeneratorSchema} from './generators/init/schema';
+export { InitGeneratorSchema } from './generators/init/schema';

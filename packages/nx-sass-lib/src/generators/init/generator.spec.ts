@@ -40,8 +40,8 @@ describe('init generator', () => {
     await generator(appTree, options);
     const basePath = `libs/${options.name}/src/abstracts`;
     expect(appTree.children(basePath).includes('_functions.scss')).toBeTruthy();
-    expect(appTree.children(basePath).includes('_mixins.scss')).toBeTruthy()
-    expect(appTree.children(basePath).includes('_variables.scss')).toBeTruthy()
+    expect(appTree.children(basePath).includes('_mixins.scss')).toBeTruthy();
+    expect(appTree.children(basePath).includes('_variables.scss')).toBeTruthy();
   }, 120000);
 
   it('should use abstracts in the main.scss file', async () => {
@@ -49,7 +49,8 @@ describe('init generator', () => {
     const filePath = `libs/${options.name}/src/main.scss`;
     expect(appTree.exists(filePath)).toBeTruthy();
 
-    expect(appTree.read(filePath).toString('utf-8').includes('abstracts')).toBeTruthy();
-    
-  })
+    expect(
+      appTree.read(filePath).toString('utf-8').includes('abstracts')
+    ).toBeTruthy();
+  });
 });

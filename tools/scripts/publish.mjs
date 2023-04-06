@@ -13,7 +13,7 @@ import { execSync } from 'child_process';
 import { readFileSync, writeFileSync } from 'fs';
 import chalk from 'chalk';
 
-const {readCachedProjectGraph} = devKit;
+const { readCachedProjectGraph } = devKit;
 
 function invariant(condition, message) {
   if (!condition) {

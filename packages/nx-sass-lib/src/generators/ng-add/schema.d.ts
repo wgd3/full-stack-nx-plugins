@@ -1,4 +1,4 @@
 export interface NgAddGeneratorSchema {
-    angularApplication: string;
-    styleLibrary: string;
+  angularApplication: string;
+  styleLibrary: string;
 }

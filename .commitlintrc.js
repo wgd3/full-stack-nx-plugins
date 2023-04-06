@@ -1,8 +1,6 @@
-
 const {
   utils: { getProjects },
 } = require('@commitlint/config-nx-scopes');
-
 
 module.exports = {
   extends: ['@commitlint/config-angular'],
@@ -19,19 +17,22 @@ module.exports = {
         'docs',
       ],
     ],
-    'type-enum': () => [2, 'always', [
-      'build',
-      'ci',
-      'docs',
-      'feat',
-      'fix',
-      'perf',
-      'refactor',
-      'revert',
-      'style',
-      'test',
-      'chore'
-    ]]
+    'type-enum': () => [
+      2,
+      'always',
+      [
+        'build',
+        'ci',
+        'docs',
+        'feat',
+        'fix',
+        'perf',
+        'refactor',
+        'revert',
+        'style',
+        'test',
+        'chore',
+      ],
+    ],
   },
 };
-

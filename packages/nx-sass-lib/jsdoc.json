@@ -3,22 +3,11 @@
     "includePattern": ".+\\.ts(doc|x)?$",
     "excludePattern": ".+\\.(test|spec).(ts|js)"
   },
-  "plugins": [
-    "node_modules/jsdoc-babel"
-  ],
+  "plugins": ["node_modules/jsdoc-babel"],
   "babel": {
-    "extensions": [
-      "ts"
-    ],
-    "ignore": [
-      "**/*.(test|spec).(ts|js)"
-    ],
-    "presets": [
-      [
-        "@babel/preset-env"
-      ],
-      "@babel/preset-typescript"
-    ],
+    "extensions": ["ts"],
+    "ignore": ["**/*.(test|spec).(ts|js)"],
+    "presets": [["@babel/preset-env"], "@babel/preset-typescript"],
     "plugins": []
   }
 }

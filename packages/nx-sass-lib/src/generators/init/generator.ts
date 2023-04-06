@@ -61,14 +61,17 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
   );
 }
 
-function updateDependencies(tree: Tree, options: InitGeneratorSchema): GeneratorCallback {
+function updateDependencies(
+  tree: Tree,
+  options: InitGeneratorSchema
+): GeneratorCallback {
   removeDependenciesFromPackageJson(tree, [], ['nx-stylelint', 'stylelint']);
 
   const devDeps = {
-    "stylelint": "^15.0.0",
-    "stylelint-config-standard": "^30.0.0",
-    "stylelint-config-standard-scss": "^7.0.0",
-  }
+    stylelint: '^15.0.0',
+    'stylelint-config-standard': '^30.0.0',
+    'stylelint-config-standard-scss': '^7.0.0',
+  };
 
   if (options.addNxStylelint) {
     devDeps['nx-stylelint'] = '^15.0.0';
@@ -77,16 +80,15 @@ function updateDependencies(tree: Tree, options: InitGeneratorSchema): Generator
   return addDependenciesToPackageJson(tree, {}, devDeps);
 }
 
-
 /**
  * Creates a style library in an Nx workspace
- * 
+ *
  * @category Generators
- * 
+ *
  * @name init
- * 
+ *
  * @example
- * 
+ *
  * $ nx g @wgd3/nx-sass-lib:init my-style-lib
  *
  * @export
@@ -122,7 +124,7 @@ export default async function (tree: Tree, options: InitGeneratorSchema) {
     const {
       initGenerator: nxStylelintInitGenerator,
       configurationGenerator: nxStylelintConfigurationGenerator,
-      scssGenerator: nxStylelintScssGenerator
+      scssGenerator: nxStylelintScssGenerator,
     } = await import('nx-stylelint');
     const stylelintInitTask = await nxStylelintInitGenerator(tree, {
       skipFormat: false,
@@ -131,7 +133,10 @@ export default async function (tree: Tree, options: InitGeneratorSchema) {
       tree,
       { project: options.name, skipFormat: false }
     )) as GeneratorCallback;
-    const stylelintScssTask = await nxStylelintScssGenerator(tree, {project: options.name, skipFormat: false});
+    const stylelintScssTask = await nxStylelintScssGenerator(tree, {
+      project: options.name,
+      skipFormat: false,
+    });
     // tasks.push(stylelintInitTask);
     tasks.push(stylelintConfigurationTask);
     tasks.push(stylelintScssTask);
