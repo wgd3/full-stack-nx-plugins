@@ -61,17 +61,14 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
   );
 }
 
-function updateDependencies(
-  tree: Tree,
-  options: InitGeneratorSchema
-): GeneratorCallback {
+function updateDependencies(tree: Tree, options: InitGeneratorSchema): GeneratorCallback {
   removeDependenciesFromPackageJson(tree, [], ['nx-stylelint', 'stylelint']);
 
   const devDeps = {
-    stylelint: '^15.0.0',
-    'stylelint-config-standard': '^30.0.0',
-    'stylelint-config-standard-scss': '^7.0.0',
-  };
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^30.0.0",
+    "stylelint-config-standard-scss": "^7.0.0",
+  }
 
   if (options.addNxStylelint) {
     devDeps['nx-stylelint'] = '^15.0.0';
@@ -79,6 +76,7 @@ function updateDependencies(
 
   return addDependenciesToPackageJson(tree, {}, devDeps);
 }
+
 
 export default async function (tree: Tree, options: InitGeneratorSchema) {
   console.log(`Running nx-sass-lib generator...`);
@@ -104,14 +102,26 @@ export default async function (tree: Tree, options: InitGeneratorSchema) {
     console.log(`Adding nx-stylelint!`);
     ensurePackage('stylelint', '^15.0.0');
     ensurePackage('nx-stylelint', '^15.0.0');
-    const { scssGenerator: nxStylelintScssGenerator } = await import(
-      'nx-stylelint'
-    );
-    const stylelintScssTask = await nxStylelintScssGenerator(tree, {
-      project: options.name,
+    const {
+      initGenerator: nxStylelintInitGenerator,
+      configurationGenerator: nxStylelintConfigurationGenerator,
+      scssGenerator: nxStylelintScssGenerator
+    } = await import('nx-stylelint');
+    const stylelintInitTask = await nxStylelintInitGenerator(tree, {
       skipFormat: false,
     });
+    const stylelintConfigurationTask = (await nxStylelintConfigurationGenerator(
+      tree,
+      { project: options.name, skipFormat: false }
+    )) as GeneratorCallback;
+    const stylelintScssTask = await nxStylelintScssGenerator(tree, {project: options.name, skipFormat: false});
+    // tasks.push(stylelintInitTask);
+    tasks.push(stylelintConfigurationTask);
     tasks.push(stylelintScssTask);
+    // tasks.push(addDependenciesToPackageJson(tree, {}, {
+    //   'nx-stylelint': '^15.0.0',
+    //   'stylelint': '^15.0.0'
+    // }));
   }
 
   await formatFiles(tree);

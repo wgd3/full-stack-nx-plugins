@@ -1,3 +1,13 @@
 {
-  "eslint.validate": ["json"]
+  "eslint.validate": [
+    "json"
+  ],
+  "terminal.integrated.env.osx": {
+    "NPM_TOKEN": "test"
+  },
+  "terminal.integrated.automationProfile.osx": {
+    "env": {
+      "NP_TOKEN": "test"
+    }
+  }
 }

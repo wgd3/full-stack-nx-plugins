@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "NgAdd",
+  "title": "",
+  "type": "object",
+  "properties": {
+    "angularApplication": {
+      "type": "string",
+      "description": "Angular application to which support for a local SCSS style library will be added",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Which Angular application would you like to add support to?",
+      "x-dropdown": "projects",
+      "x-priority": "important"
+    },
+    "styleLibrary": {
+      "type": "string",
+      "description": "Name of the style library",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": "Which style library would you like to use?",
+      "x-dropdown": "projects"
+    }
+  },
+  "required": ["angularApplication", "styleLibrary"]
+}
