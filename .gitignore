@@ -43,3 +43,4 @@ Thumbs.db
 .cache-loader/
 
 .env
+.npmrc
