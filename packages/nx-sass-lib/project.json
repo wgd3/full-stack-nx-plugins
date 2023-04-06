@@ -72,8 +72,9 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
+        "push": true,
         "preset": "angular",
-        "postTargets": ["nx-sass-lib:npm", "nx-sass-lib:github"]
+        "postTargets": ["nx-sass-lib:github", "nx-sass-lib:npm"]
       }
     },
     "github": {
