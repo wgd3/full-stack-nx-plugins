@@ -1,14 +1,36 @@
 {
   "name": "@wgd3/nx-sass-lib",
-  "version": "0.0.1",
+  "description": "A collection of Nx plugins to enhance full stack development",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wgd3/full-stack-nx-plugins"
+  },
+  "keywords": [
+    "Nx",
+    "monorepo",
+    "plugin",
+    "sass",
+    "scss"
+  ],
+  "author": {
+    "name": "Wallace Daniel",
+    "email": "wallace@thefullstack.engineer",
+    "url": "https://thefullstack.engineer"
+  },
+  "homepage": "https://wgd3.github.io/full-stack-nx-plugins",
+  "bugs": {
+    "url": "https://github.com/wgd3/full-stack-nx-plugins/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "^16.0.0 || >= 18.0.0"
+  },
+  "version": "1.0.0",
   "main": "src/index.js",
   "generators": "./generators.json",
   "executors": "./executors.json",
   "dependencies": {
     "stylelint": "^15.0.0",
     "nx-stylelint": "^15.0.0"
-  },
-  "devDependencies": {
-    "sass": "^1.60.0"
   }
 }
