@@ -1258,6 +1258,11 @@
   dependencies:
     "@commitlint/config-angular-type-enum" "^17.4.0"
 
+"@commitlint/config-nx-scopes@^17.4.3":
+  version "17.4.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-nx-scopes/-/config-nx-scopes-17.4.3.tgz#4b8bc7adec8f8a2f60326ca59366a3c3b28c44a0"
+  integrity sha512-9toDrRRLJYGi3/nhGvI5cYd7H0mThyRL31gZjHXl4rz3ErLev/unoYHG+oHfSaVVCJb5ItGhVHM+GnGbUH+35g==
+
 "@commitlint/config-validator@^17.4.4":
   version "17.4.4"
   resolved "https://registry.yarnpkg.com/@commitlint/config-validator/-/config-validator-17.4.4.tgz#d0742705719559a101d2ee49c0c514044af6d64d"
