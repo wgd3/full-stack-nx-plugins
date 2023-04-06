@@ -33,6 +33,10 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
 
+      - name: Generate Docs
+        shell: bash
+        run: npx ts-node packages/nx-sass-lib/doc-generator.ts
+
       - name: Build production bundle
         uses: borales/actions-yarn@v4
         with:
