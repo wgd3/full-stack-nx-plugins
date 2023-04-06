@@ -78,6 +78,23 @@ function updateDependencies(tree: Tree, options: InitGeneratorSchema): Generator
 }
 
 
+/**
+ * Creates a style library in an Nx workspace
+ * 
+ * @category Generators
+ * 
+ * @name init
+ * 
+ * @example
+ * 
+ * $ nx g @wgd3/nx-sass-lib:init my-style-lib
+ *
+ * @export
+ * @async
+ * @param {Tree} tree
+ * @param {InitGeneratorSchema} options
+ * @returns {unknown}
+ */
 export default async function (tree: Tree, options: InitGeneratorSchema) {
   console.log(`Running nx-sass-lib generator...`);
   const tasks: GeneratorCallback[] = [];

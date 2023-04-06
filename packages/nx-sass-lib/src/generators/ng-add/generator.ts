@@ -75,6 +75,24 @@ async function updateMainStyles(tree: Tree, options: NormalizedSchema) {
   })
 }
 
+/**
+ * Integrates a local style library with an Angular application. 
+ * 
+ * The specified application's `project.json` file is updated so that it's build target options include `stylePreprocessorOptions` that point to the style library. It also updates the application's main `styles.scss` file.
+ * 
+ * @category Generators
+ * 
+ * @name ng-add
+ * 
+ * @example
+ * 
+ * $ nx g @wgd3/nx-sass-lib:ng-add \
+ *   --angularApplication my-app \
+ *   --styleLibrary my-style-lib
+ * 
+ * @param tree 
+ * @param options 
+ */
 export default async function (tree: Tree, options: NgAddGeneratorSchema) {
   const normalizedOptions = normalizeSchema(tree, options);
   updateAppConfig(tree, normalizedOptions);
