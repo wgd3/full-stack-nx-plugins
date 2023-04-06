@@ -2221,7 +2221,7 @@
   dependencies:
     nx "15.9.2"
 
-"@nrwl/devkit@15.9.2", "@nrwl/devkit@^15.0.0":
+"@nrwl/devkit@15.9.2", "@nrwl/devkit@>=15.0.0", "@nrwl/devkit@^15.0.0":
   version "15.9.2"
   resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-15.9.2.tgz#482b89f1bf88d3600b11f8b7e3e4452c5766eca4"
   integrity sha512-2DvTstVZb91m+d4wqUJMBHQ3elxyabdmFE6/3aXmtOGeDxTyXyDzf/1O6JvBBiL8K6XC3ZYchjtxUHgxl/NJ5A==
@@ -8204,6 +8204,14 @@ nwsapi@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.2.tgz#e5418863e7905df67d51ec95938d67bf801f0bb0"
   integrity sha512-90yv+6538zuvUMnN+zCr8LuV6bPFdq50304114vJYJ8RDyK8D5O9Phpbd6SZWgI7PwzmmfN1upeOJlvybDSgCw==
+
+nx-stylelint@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/nx-stylelint/-/nx-stylelint-15.0.0.tgz#a77f93f7a7f692b143193518d3dd9108943a7c1b"
+  integrity sha512-trgyW/aGtYGdfVmOmyHqL1WUm7IlG+v+OqcI9boUqNd5AzKzzOOXeK11UUzW8wn6H4XK20J9rQrqX/JA0oAZdA==
+  dependencies:
+    "@nrwl/devkit" ">=15.0.0"
+    tslib "^2.5.0"
 
 nx@15.9.2:
   version "15.9.2"

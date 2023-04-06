@@ -18,10 +18,15 @@
       "type": "string",
       "description": "Add tags to the project (used for linting)",
       "alias": "t"
-    }, 
+    },
     "directory": {
       "type": "string",
       "description": "A directory where the project is placed"
+    },
+    "addNxStylelint": {
+      "type": "boolean",
+      "default": true,
+      "description": "Installs the nx-stylelint plugin and configures this library with stylelint targets"
     }
   },
   "required": ["name"]
